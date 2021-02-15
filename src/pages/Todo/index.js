@@ -7,10 +7,9 @@ export function Todo() {
   const [line, setLine] = useState(0);
   function addList() {
     if (text == "") return;
-    setList([...list, { text , line : line}]);
+    setList([...list, { text, line: line }]);
     setText("");
     setLine(line + 1);
-    
   }
   function deleteText(line) {
     setList(list.filter((item) => item.line !== line));
@@ -18,21 +17,29 @@ export function Todo() {
   return (
     <div className={styles.body}>
       <div className={styles.page}>
-        <div className={styles.input}>
+        <div className={styles.top}>
           <input
+            className={styles.input}
             value={text}
             onChange={(e) => setText(e.target.value)}
             placeholder="type something..."
-            maxLength='25'
+            maxLength="25"
           />
-          <button onClick={() => addList()}>add</button>
+          <button className={styles.button} onClick={() => addList()}>
+            add
+          </button>
         </div>
         <div className={styles.todo}>
-          <h2>Todo List</h2>
+          <div className={styles.header}>Todo List</div>
           {list.map((item) => (
-            <div key = {item.line} className={styles.text}>
+            <div key={item.line} className={styles.text}>
               <div>{item.text}</div>
-              <button onClick={() => deleteText(item.line)}>delete</button>
+              <button
+                className={styles.button}
+                onClick={() => deleteText(item.line)}
+              >
+                delete
+              </button>
             </div>
           ))}
         </div>

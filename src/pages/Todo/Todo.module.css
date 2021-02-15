@@ -1,31 +1,72 @@
 .body {
-    min-height: calc(100vh - 60px);
-    background-color: #f1fde5;
-}
-
-.input {
-    display: flex;
-    width: 30%;
-    margin-top: 100px;
-    justify-content: space-between;
+  min-height: calc(100vh - 60px);
+  background-color: #f1fde5;
 }
 
 .page {
-    display: flex;
-    align-items: center;
-    flex-direction: column;
-    
+  display: flex;
+  align-items: center;
+  flex-direction: column;
 }
 
 .todo {
-    width: 50%;
-    justify-content: center;
-    text-align: center;
+  width: 50%;
+  justify-content: center;
+  text-align: center;
 }
 
 .text {
-    background-color: rgba(214, 214, 214, 0.349);
-    text-align: left;
-    display: flex;
+  background-color: rgba(214, 214, 214, 0.349);
+  display: flex;
+  justify-content: space-between;
+  margin-top: 10px;
+  padding-left: 10px;
+  padding-right: 10px;
+  height: 40px;
+  align-items: center;
+  font-size: 24px;
+  border-radius: 5px;
+}
+
+.header {
+  font-size: 40px;
+}
+
+.button {
+  border: none;
+  cursor: pointer;
+  width: 60px;
+  height: 30px;
+  background: rgb(99, 99, 99);
+  color: rgb(255, 255, 255);
+  transition: all 0.2s ease;
+  border-radius: 5px;
+  font-size: large;
+}
+.button:focus {
+  outline: none;
+}
+.button:hover {
+  background: #e9b699;
+  color: #1f1f1f;
+}
+
+.input {
+  border-radius: 4px;
+  border: 5px;
+  width: 80%;
+  min-height: 40px;
+  justify-content: space-between;
+  outline: auto;
+  font-size: large;
+  margin-right: 10px;
+}
+
+.top {
     justify-content: space-between;
+    min-height: 200px;
+    width: 30%;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
 }
