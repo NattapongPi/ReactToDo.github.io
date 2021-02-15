@@ -1,0 +1,31 @@
+.body {
+    min-height: calc(100vh - 60px);
+    background-color: #f1fde5;
+}
+
+.input {
+    display: flex;
+    width: 30%;
+    margin-top: 100px;
+    justify-content: space-between;
+}
+
+.page {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    
+}
+
+.todo {
+    width: 50%;
+    justify-content: center;
+    text-align: center;
+}
+
+.text {
+    background-color: rgba(214, 214, 214, 0.349);
+    text-align: left;
+    display: flex;
+    justify-content: space-between;
+}
