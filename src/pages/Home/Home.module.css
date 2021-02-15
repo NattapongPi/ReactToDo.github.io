@@ -2,6 +2,8 @@
     background-color: #f1fde5;
     min-height: calc(100vh - 60px);
     display: flex;
-    justify-content: center;
+    justify-content: space-evenly;
     align-items: center;
+    flex-direction: column;
+    font-size: 24px;
 }

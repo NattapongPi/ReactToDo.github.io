@@ -1,9 +1,10 @@
-import { useState } from "react";
+import { useContext, useState } from "react";
 import styles from "./Todo.module.css";
+import { ListContext } from "../../context";
 
 export function Todo() {
   const [text, setText] = useState("");
-  const [list, setList] = useState([]);
+  const [list, setList] = useContext(ListContext);
   const [line, setLine] = useState(0);
   function addList() {
     if (text == "") return;
@@ -30,7 +31,7 @@ export function Todo() {
           </button>
         </div>
         <div className={styles.todo}>
-          <div className={styles.header}>Todo List</div>
+          <div className={styles.header}> Todo List</div>
           {list.map((item) => (
             <div key={item.line} className={styles.text}>
               <div>{item.text}</div>
